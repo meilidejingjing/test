@@ -135,16 +135,41 @@ RePoly(10,4,5.6,7.8).getPerimeter()
 RePoly(10,4,5.6,7.8).Area()
 
 '''
-
+'''
 #5.5
+class linear:
+    def __init__(self,a,b,c,d,e,f):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+        self.e = e
+        self.f = f
+    def issolvable(self):
+        self.o = (self.a*self.d)-(self.b*self.c)
+        if(self.o!=0):
+            return True
+        else:
+            print("wujie")
+    def getx(self):
+        self.x = ((self.e*self.d)-(self.b*self.f))/self.o
+        print("x={}".format(self.x))
+    def gety(self):
+        self.y=((self.a*self.f)-(self.e*self.c))/self.o
+        print("y={}".format(self.y))
+a,b,c,d,e,f=eval(input(">>"))
+k =linear(a,b,c,d,e,f)
+if(k.issolvable()==True):
+    k.getx()
+    k.gety()
 
+'''
 
 #5.6
 class LinearaEquation:
 x1,y1,x2,y2=eval(raw_input(">>yideduandian:"))
 x3,y3,x4,y4=eval(raw_input(">>erdeduandian:"))
     
-
 
 
 
